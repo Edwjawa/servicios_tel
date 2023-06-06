@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caninos y Felinos</title>
+    <link rel="icon" type="veterinaria" href="../imag/veterinario.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/registerForm.css">
+</head>
+
+<body class="principal">
+
+    <div class="mydiv">
+        
+                
+            <header class="grid-container">
+                
+                <div>
+                    <h2>CENTRO  </h2>
+                    <h1> DE REGISTRO <br><span style="margin-left: 90px;"> TELEFONIA </span></h1>
+                </div> 
+                <div>
+                    <a href="/index.html">
+                        
+                        <!-- cambiar a imagenes realcionadas con servicios telefónicos -->
+                        <!-- <img width="100px" src="imag/gatico1.png" alt="perritos y gatitos">
+                        <img width="100px" src="imag/perrito1.png" alt="perritos y gatitos"> -->
+                    </a>
+                </div>
+                
+            </header>
+        
+            <nav>
+
+                <ul>
+                    <li>
+                        <a href="./pag/construction.html">Servicios</a>    
+                        
+                    </li>
+                    <li>
+                        <a href="./pag/construction.html">Productos</a>    
+
+                    </li>
+
+                    <!-- <li>
+                         <a href="./pag/construction.html">Guarderia</a>    
+
+                    </li> -->
+                    
+                    <li>
+                        <a href="./pag/construction.html">Promociones</a>  
+
+                    </li>
+
+                    <button class="myreg">
+                        <a href="./pag/registerForm.html"> REGISTRATE </a>
+                    </button>
+
+                    
+                </ul>
+                
+               
+
+            </nav>
+                     
+        <main>
+    
+            <section class="mysection">
+                
+                <form  method= "post" action="" class="myform" id="register"> 
+            
+                    <h2>Registrate</h2>    
+                    
+                    
+                    <label class="mylabel2" for="name">Nombre:
+                         
+                        <input maxlength="28" autofocus="true" class="mynormalinput" type="text"  id="name" name="name" pattern="[A-Z]{2,28}" title="Utiliza mayúsculas" required> 
+                    </label>
+
+                    <label class="mylabel2" for="apellido">Apellido:
+                         
+                        <input maxlength="18" class="mynormalinput" type="text"  id="apellido" name="apellido" pattern="[A-Z]{2,28}" title="Utiliza mayúsculas" required> 
+                    </label>
+                    
+                    <label class="mylabel2" for="cedula">Cédula:
+                        
+                        <input class="mynormalinput" type="cedula"  id="cedula" name="cedula" required> 
+                    </label>
+                    
+                    
+                    <label class="mylabel2" for="fecha">Fecha de Nacimiento: 
+                        <input type="date" name="fecha">
+                    </label>                
+                                        
+                    <label class="mylabel2" for="email">Correo:
+                    
+                    <input class="mynormalinput" type="email"  id="name" name="email" required> 
+                    </label>
+                    
+                    <label class="mylabel2" for="emailc">Confirma Correo:
+                    
+                    <input class="mynormalinput" type="email"  id="name" name="emailc" required> 
+                    </label>
+                    
+
+                    <label class="mylabel2" for="user">Usuario:
+                        <input maxlength="10" type="text" name="user" required>
+                    </label>
+
+                    <label class="mylabel2" for="password">Crea una Contraseña
+                        <input type="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                        title="Usar al menos 1 número, 1 mayúscula, 1 minúscula y tener más 7 de carácteres." required>
+                    </label>
+                    
+                    <label class="mylabel2" for="passwordc">Confirma Contraseña
+                        <input type="password" name="passwordc" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                        title="Usar al menos 1 número, 1 mayúscula, 1 minúscula y tener más 7 de carácteres." required>
+                    </label>
+
+                    <div class="mydivbutton">        
+                                                
+                        <button class="myval" type="reset"> LIMPIAR
+                        </button>
+
+                        <button style="background-color: #ff9d00;" class="myval" type="submit" formaction="./construction.html"> REGISTRAR
+                        </button>
+                    </div>                    
+                </form>
+
+            </section>
+        </main>
+        <footer>
+
+            <p>Contáctanos <br> 
+            Linea gratuita 018000-00001 <br>
+            creditos:<a href="https://www.flaticon.es/iconos-gratis/veterinario" title="veterinario iconos">Veterinario iconos creados por Freepik - Flaticon</a>
+           
+            </p>
+            <h3>
+            Página elaborada por: <br>
+                Edward James Walther Junior Pérez Rayo <br>
+                
+            </h3>
+            
+       
+        </footer>
+        <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+        <script src="../js/conector copy.js"></script>
+
+</body>
+</html>

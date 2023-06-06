@@ -1,0 +1,242 @@
+
+a:link{
+    color: azure;
+    text-decoration: none;
+  
+}
+
+body{
+    background-image: url(../imag/paticas.png);
+    font-family: 'Bubblegum Sans', cursive;
+}
+
+
+button a{
+    display: block;
+    color:#204c4c;
+    text-align: center;
+    padding: 5px;
+    text-decoration: none;
+    
+    
+}
+
+button a:hover:not(.active) {
+    background-color: #ffe285;
+    font-weight: bold;
+   
+}
+
+
+footer {
+    
+    padding: 10px;
+    background-color: #204c4c;
+    border-radius: 2%;
+    color: azure;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+
+
+}
+
+
+footer h3{
+    margin: 0px;
+}
+
+form h2{
+    margin: 13px 0px;
+    /* margin-bottom: 15px; */
+    padding: 5px;
+    background-color:#ff9d00;
+    text-align: center;
+    color: #204c4c;
+    border-top: none;
+}
+
+h1{
+    font-size: 45px;
+    margin-top: 10px;
+    margin-left: 175px;
+    color:#204c4c;
+    /* justify-content: center; */
+    /* align-content: center; */
+}
+
+
+
+h2{
+    font-size: 20px;
+    margin-top: 15px;
+    margin-left: 25px;
+    /* justify-content: center; */
+}
+
+
+
+header{
+    background:  #ff9d00;
+    /* background-image: url(imag/paticas.png); */
+    align-items: center;
+    padding: 0px;
+    /* border-radius: ; */
+    
+}
+
+
+
+
+img{
+    
+    margin: 15px;
+}
+
+li {
+    float:left;
+       
+}
+
+li a{
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 18px 16px;
+    text-decoration: none;
+    pointer-events: none;
+
+}
+
+li a:hover:not(.active) {
+    background-color: #8abc40;
+    color: black;
+     
+}
+
+
+
+
+ul {list-style-type: none;
+    margin:0;
+    padding: 0;
+    overflow: hidden;
+    background-color:#8abc40;
+    display:flex;
+    justify-content: center;
+    
+    
+    /* border-radius: 10%; */
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    align-items: center;
+    
+    
+}
+
+.myart{
+    margin: 7px 3px 7px 3px;
+    background-color: #ffe285;
+    padding: 13px;
+    display: grid;
+    grid-template-columns: 75% 25%;
+    align-items: flex-end;
+    border-radius: 4%;
+
+}
+
+.myborder{
+    border-radius: 4%;
+}
+
+.mydiv{
+    
+    text-align: justify;
+    width: 65%;
+    
+}
+
+
+.myform{
+    background-color:#8abc40 ;
+    display: flex;
+    flex-direction: column;
+    align-items: initial;
+    margin: 10px 5px;
+    color: black;
+    border-radius: 4%;
+
+}
+
+.myimg{
+    margin: auto;
+}
+
+.myindex{
+    width: 15%;
+    padding: 0px; 
+    margin: 15px 35px 15px auto;
+    border-style:none;
+    /* border-radius: 10%; */
+    /* background-color: #ff9d00;
+    color:beige; */
+}
+
+.mylabel{
+    margin: 10px 25px;
+    display: flex;
+    flex-direction: row;
+    align-content:center;
+}
+
+.mylabel2{
+    margin: 10px 25px;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    
+
+
+}
+
+.mynormalinput{
+    margin-right:0px;
+    align-items: flex-end;
+    
+}
+
+.mysection{
+    margin: 7px 3px 7px 3px;
+    background-color: #ffe285;
+    padding: 13px;
+    display: grid;
+    grid-template-columns: 100%;
+    align-items: flex-end;
+    border-radius: 4%;
+}
+
+.mysmallinput{
+    width: 15%;
+   
+}
+
+.myval{
+    
+    width: 35%;
+    padding: 5px;
+    margin: 15px auto;
+    border-style:none;
+    border-radius: 12%;
+
+}
+
+
+
+.principal{
+    display:flex;
+    justify-content: center;
+}
