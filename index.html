@@ -49,7 +49,7 @@
                          <a href="./pag/construction.html">Guarderia</a>    
 
                     </li> -->
-                    
+
                     <li>
                         <a href="./pag/construction.html">Promociones</a>  
 
@@ -123,18 +123,18 @@
                     </label>
                     
                     <label class="mylabel2" for="apellido">Apellido: 
-                        <input class="mynormalinput" type="text"  id="name" name="apellido"> 
+                        <input class="mynormalinput" type="text"  id="lastname" name="apellido"> 
                     </label>
                     
                     <label class="mylabel2" for="cedula">Cédula: 
-                        <input class="mynormalinput" type="text"  id="name" name="cedula"> 
+                        <input class="mynormalinput" type="text"  id="identification" name="cedula"> 
                     </label>
 
                     <label class="mylabel" for="contacto">Métodos de contactos: 
                         <p>
                             <!-- buscar motivos de PQRS mas usuales. estos son los valores a guardar en variables de JS  -->
-                        <input type="checkbox" name="contacto">Correo Electrónico:
-                        <input type="checkbox" name="contacto">Tel. Cel:
+                        <input type="checkbox" id="" name="contacto">Correo Electrónico:
+                        <input type="checkbox" id="" name="contacto">Tel. Cel:
                         </p>
                     </label>
                     
@@ -181,7 +181,7 @@
                     </label> -->
 
 
-                    <button class="myval">SOLICITAR
+                    <button class="myval"  onclick="ingresarLogin()">SOLICITAR
                     </button>
                                         
                 </form>
@@ -212,6 +212,7 @@
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
-    <script src="./js/conector.js"></script>
+    <script src="./models/conexion_db.js"></script>
+    <script src="./controllers/cita_cliente.js"></script>
 </body>
 </html>
