@@ -5,13 +5,14 @@ a:link{
   
 }
 
+
 body{
-    background-image: url(../imag/paticas.png);
+    
     font-family: 'Bubblegum Sans', cursive;
 }
 
 button a:link{
- color:#2f4858;
+    color:#2f4858;
 }
 
 button a:visited {
@@ -19,6 +20,9 @@ button a:visited {
     font-weight: bold;
     color:#204c4c;
 }
+
+
+
 
 footer {
     
@@ -52,7 +56,7 @@ form h2{
 h1{
     font-size: 45px;
     margin-top: 10px;
-    margin-left: 175px;
+    /* margin-left: 175px; */
     color:#204c4c
     /* justify-content: center; */
     /* align-content: center; */
@@ -90,7 +94,7 @@ li {
     float:left;
     
     
-     
+    
 }
 
 li a{
@@ -100,36 +104,83 @@ li a{
     padding: 18px 16px;
     text-decoration: none;
     
-
+    
 }
 
 li a:hover:not(.active) {
     background-color: #ff9d00;
     color: #2f4858;
     
-   
+    
 }
 
+.asignationTitle{
+    display:flex;
+    justify-content: center;
+    align-content: flex-start;    
+    color: #204c4c;
+    
+}
 
-
+table{
+    width: 100%;
+    border: 1px solid green;
+}
 
 ul {list-style-type: none;
+    display:flex;
+    justify-content: center;
     margin:0;
     padding: 0;
     overflow: hidden;
     background-color:#8abc40;
-    display:flex;
-    justify-content: center;
     
     
     /* border-radius: 10%; */
 }
 
+.aitem{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+ 
+}
 
-.grid-container {
-    display: grid;
-    grid-template-columns: 60% 40%;
-    align-items: center;
+.banner{
+    width: 80%;
+    display:flex;
+    justify-content: center;
+
+}
+
+.consultaInfo{
+
+    width:100%;
+    display:flex;
+    justify-content: center;
+    
+
+}
+
+.description{
+    
+    resize: both;
+    display: flex;
+    align-self: center;
+    max-width: 100%;
+    min-width: 10%;
+    max-height: 100%;
+    min-height: 10%;
+}
+
+.flex-container {
+    /* grid-template-columns: 60% 40%; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    /* align-items: center; */
+    text-align: center;
     
     
 }
@@ -152,12 +203,18 @@ ul {list-style-type: none;
 .mydiv{
     
     text-align: justify;
-    width: 65%;
+    width: 90%;
     
 }
 
+.mydivbutton{
+    display:flex;
+    justify-content: center;
+
+}
 
 .myform{
+    width: 80%;
     background-color:#8abc40 ;
     display: flex;
     flex-direction: column;
@@ -184,6 +241,15 @@ ul {list-style-type: none;
 
 }
 
+.mylabel3{
+    margin: 10px 25px;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    text-shadow: #8abc40;
+
+
+}
+
 .mynormalinput{
     margin-right:0px;
     align-items: flex-end;
@@ -191,23 +257,14 @@ ul {list-style-type: none;
 }
 
 
-.mysmallinput{
-    width: 15%;
-   
-}
 
-.myval{
-    
-    width: 35%;
-    padding: 5px;
-    margin: 15px auto;
-    border-style:none;
-    border-radius: 10px;
 
-}
+
 
 .myreg{
     width: 15%;
+    display: flex;
+    justify-content: center;
     padding: 5px;
     margin: 15px 35px 15px auto;
     border-style:none;
@@ -222,6 +279,33 @@ ul {list-style-type: none;
     
 }
 
+.mysection{
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+
+.mysmallinput{
+    width: 15%;
+    
+}
+
+.mytable{
+    margin:10px;
+    padding: 20px;
+    background-color: #ff9d00;
+    border-radius: 10px;
+    
+}
+
+.myval{
+    
+    width: 35%;
+    padding: 5px;
+    margin: 15px auto;
+    border-style:none;
+    border-radius: 10px;
+    
+}
 
 .principal{
     display:flex;

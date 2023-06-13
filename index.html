@@ -4,192 +4,122 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro_tel</title>
-    <!-- <link rel="icon" type="veterinaria" href="./imag/veterinario.ico"> -->
+    <title>Solicitar Cita</title>
+    <link rel="icon" type="" href="./views/imag/telefono.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./views/resources/styles/index.css">
 </head>
 <body class="principal">
 
     <div class="mydiv">
         
                 
-            <header class="grid-container">
+        <header class="flex-container">
+            
+            <div class="banner">
+                <h1>CENTRO DE REGISTRO TELEFONIA</h1>
                 
-                    <div>
-                        <h2>CENTRO  </h2>
-                        <h1> DE REGISTRO <br><span style="margin-left: 90px;"> TELEFONIA </span></h1>
-                    </div> 
-                    <div>
-                        <a href="/index.html">
-                            
-                            <!-- cambiar a imagenes realcionadas con servicios telefónicos -->
-                            <!-- <img width="100px" src="imag/gatico1.png" alt="perritos y gatitos">
-                            <img width="100px" src="imag/perrito1.png" alt="perritos y gatitos"> -->
-                        </a>
-                    </div>
-                
-            </header>
-        
-            <nav>
-
-                <ul>
-                    <li>
-                        <a href="./pag/construction.html">Servicios</a>    
+            </div>
                         
-                    </li>
-                    <li>
+        </header>
+        
+        <nav>
+
+            <ul>
+                <li>
+                    <div class="aitem">
+                        <a href="./pag/construction.html">Servicios</a>    
+                    </div>
+                </li>
+                <li>
+                    <div class="aitem">
                         <a href="./pag/construction.html">Productos</a>    
-
-                    </li>
-
-                    <!-- <li>
-                         <a href="./pag/construction.html">Guarderia</a>    
-
-                    </li> -->
-
-                    <li>
+                    </div>
+                </li>
+                                
+                <li>
+                    <div class="aitem">
                         <a href="./pag/construction.html">Promociones</a>  
+                    </div>
+                </li>
 
-                    </li>
+                <button class="myreg" type="button">
+                    <div class="aitem">
+                        <a href="./views/registerForm.html"> REGISTRATE </a>
+                    </div>
+                </button>
 
-                    <button class="myreg">
-                        <a href="./pag/registerForm.html"> REGISTRATE </a>
-                    </button>
+                <button class="myreg" type="button">
+                    <div class="aitem">
+                        <a href="./views/admintable.html"> ADMINISTRADOR </a>
+                    </div>
+                </button>
 
-                    
-                </ul>
                 
-               
+            </ul>
+            
+            
 
-            </nav>
+        </nav>
 
              
         
         
-        <main class="grid-container">
+        <main class="flex-container">
             
-            <section>
-
-
-                <article class="myart">
-                    <div>
-                        <!-- <h3> Cuidado y Educación para su perro</h3>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing <br>
-                            elit. Esse ipsam inventore, deserunt excepturi sit quisquam <br>
-                            consequatur eos ratione laboriosam asperiores. ipsum dolor sit <br>
-                            amet consectetur adipisicing elit. Cumque, nulla!
-                            <br><br>
-                            <a href=""> ver mas...</a>
-                            
-
-                        </p> -->
-                    </div>
-                    <div>
-                        <!-- <img width="90%" src="imag/educacion_perros.png" alt="mascota y educacion"> -->
-                    </div>
-                </article>
+         
+            <section class="flex-container">
                 
-                <article class="myart">
-                    <div>
-                        <!-- <h3>Salir de viaje con su mascota</h3>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing <br>
-                            elit. Esse ipsam inventore, deserunt excepturi sit quisquam <br>
-                            consequatur eos ratione laboriosam asperiores. ipsum dolor sit <br>
-                            amet consectetur adipisicing elit. Cumque, nulla! 
-                            <br><br>
-                            <a href="">ver mas...</a>
-                                
-
-                        </p> -->
-                    </div>
-                    <div>
-                    <!-- <img width="90%" src="imag/viajar_perro.png" alt="mascota y viaje"> -->
-                    </div>
-                </article>
-
-            </section>    
-            
-
-            <aside>
-                <!-- modificar formulario de solicitud de cita conforme a una empresa telefonica -->
-                <form  method= "post" action="" class="myform" id="cita"> 
+                <form  method= "get" action="" class="myform" id="cita" onsubmit="solicitarCita(); return false;"> 
                     <h2>Solicitar Cita</h2>
                     
-                    <label class="mylabel2" for="nombre">Nombre: 
+                    <label class="mylabel2" for="name">Nombre: 
                         <input class="mynormalinput" type="text"  id="name" name="nombre"> 
                     </label>
                     
-                    <label class="mylabel2" for="apellido">Apellido: 
+                    <label class="mylabel2" for="lastname">Apellido: 
                         <input class="mynormalinput" type="text"  id="lastname" name="apellido"> 
                     </label>
                     
-                    <label class="mylabel2" for="cedula">Cédula: 
+                    <label class="mylabel2" for="identification">Cédula: 
                         <input class="mynormalinput" type="text"  id="identification" name="cedula"> 
-                    </label>
-
-                    <label class="mylabel" for="contacto">Métodos de contactos: 
-                        <p>
-                            <!-- buscar motivos de PQRS mas usuales. estos son los valores a guardar en variables de JS  -->
-                        <input type="checkbox" id="" name="contacto">Correo Electrónico:
-                        <input type="checkbox" id="" name="contacto">Tel. Cel:
-                        </p>
-                    </label>
-                    
-                    <label class="mylabel" for="motivo">Motivo Solicitud: 
-                        <p>
-                            <!-- buscar motivos de PQRS mas usuales. estos son valores a guardar en variables de JS -->
-                            <input type="radio" name="motivo">Perro
-                            <input type="radio" name="motivo"> Gato
-                            <input type="radio" name="motivo"> Gato
-                            <input type="radio" name="motivo"> Gato
-                            <!-- configurar en css el max-lenght y el max-width y quitar el cols y rows -->
-                            <textarea name="descripcion" id="" cols="30" rows="10"></textarea>
-
-                        </p>
                     </label>
                     
                     <label class="mylabel" for="servicio">Servicios Afectados: 
                         <p>
-                            <!-- buscar motivos de PQRS mas usuales. estos son valores a guardar en variables de JS  -->
-                            <input type="checkbox" name="servicio">Correo Electrónico:
-                            <input type="checkbox" name="servicio">Tel. Cel:
-                            <input type="checkbox" name="servicio">Tel. Cel:
-                            <input type="checkbox" name="servicio">Tel. Cel:
+                            
+                            <input type="checkbox" id="television" name="servicio"> Televisión:
+                            <input type="checkbox" id="internet" name="servicio"> Internet:
+                            <input type="checkbox" id="telHome" name="servicio"> Telefonia:
+                            <input type="checkbox" id="telMovil" name="servicio"> Telefonia Móvil:
                         </p>
                     </label>
                     
                     
-                                        
-                  <!--   <label class="mylabel2" for="raza">Raza: 
-                        <input class="mynormalinput" type="text" name="raza">
+                    <label class="mylabel2" for="description">Motivo Solicitud: 
 
-                    </label> --> 
-
-                    <label class="mylabel2" for="fecha">Fecha: 
-                        <input type="date" name="fecha">
+                        <div class="description">
+                            
+                            <textarea name="descripcion" id="description" rows="5"></textarea>
+                        </div>
+                    </label>
+                    
+                    <label class="mylabel2" for="date_cita">Fecha: 
+                        <input type="date" name="fecha" id="date_cita">
                     </label>                
 
-                    <label class="mylabel2" for="hora">Hora: 
-                        <input type="time" name="hora">
+                    <label class="mylabel2" for="hour_cita">Hora: 
+                        <input type="time" name="hora" id="hour_cita">
                     </label>
 
-                   <!--  <label class="mylabel2" for="Amo">Amo: 
-                        <input type="text" name="amo">
-                    </label> -->
-
-
-                    <button class="myval"  onclick="ingresarLogin()">SOLICITAR
+                    <button class="myval" type="submit" id="myval" name="myval" >SOLICITAR
                     </button>
                                         
                 </form>
 
-
-
-
-            </aside>
+            </section>
 
 
         </main>
@@ -197,8 +127,9 @@
 
             <p>Contáctanos <br> 
             Linea gratuita 018000-00001 <br>
-            <!-- buscar iconos relacionados con telefonia -->
-                creditos:<a href="https://www.flaticon.es/iconos-gratis/veterinario" title="veterinario iconos">Veterinario iconos creados por Freepik - Flaticon</a>
+               
+            creditos:<a href="https://www.flaticon.es/iconos-gratis/llamada" title="llamada iconos">Llamada iconos creados por Gregor Cresnar - Flaticon</a>
+            
             </p>
             <h3>
             Página elaborada por: <br>
@@ -209,10 +140,11 @@
         </footer>
     </div>
 
-    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
-    <script src="./models/conexion_db.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+    <script defer src="./models/conexion_db.js"></script>
     <script src="./controllers/cita_cliente.js"></script>
+    
 </body>
 </html>

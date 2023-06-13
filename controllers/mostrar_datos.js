@@ -1,15 +1,52 @@
+var db= firebase.database();
 
+var key;
 
-//crear metodos para obtener datos del DOM 
-// adaptar para el caso
+var datosurl =new URLSearchParams(windows.location.search);
 
+function consultarRegistro(){
+    var db= firebase.database().ref().child("Solicitudes_citas");
+    databse
+        .once("value")
 
-function ingresarLogin(){
+        .then(function (snapshot) {
+            snapshot.forEach(function (data) {
+                const id= datosurl.get("cedula");
+                const key = data.key;
 
-    let documento = document.getElementById('usuario').value;
-    let password  = document.getElementById('password').value;
+                if (id == key){
+                    var nombre_cliente = data.val().nombre;
+                    var apellido_cliente = data.val().apellido;
+                    var cedula_cliente = data.val().cedula;
+                    var descripcion_solicitud_cliente = data.val().descripcion;
+                    var television_afectados_cliente = data.val().tvAfectado;
+                    var intenet_afectados_cliente = data.val().internetAfectado;
+                    var telefonia_afectados_cliente = data.val().telefoniaAfectado;
+                    var telefonia_movil_afectados_cliente = data.val().movilAfectado;
+                    var fecha_solicitud_cliente = data.val().fecha;
+                    var hora_solicitud_cliente = data.val().hora;
 
-    firebase.database().ref('Usuarios/'+documento+0).once('value').then(
+                    // implementar envio de datos al html
+                        ("nombre_cliente").html(nombre_cliente);
+                        ("apellido_cliente").html(apellido_cliente);
+                        ("cedula_cliente").html(cedula_cliente);
+                        ("descripcion_solicitud_cliente").html(descripcion_solicitud_cliente);
+                        ("television_afectados_cliente").html(television_afectados_cliente);
+                        ("intenet_afectados_cliente").html(intenet_afectados_cliente);
+                        ("telefonia_afectados_cliente").html(telefonia_afectados_cliente);
+                        ("telefonia_movil_afectados_cliente").html(telefonia_movil_afectados_cliente);
+                        ("fecha_solicitud_cliente").html(fecha_solicitud_cliente);
+                        ("hora_solicitud_cliente").html(hora_solicitud_cliente);
+                    }
+                });
+            });
+    }
+
+    /* 
+    let nombre = document.getElementById('name').value;
+    let cedula  = document.getElementById('cedula').value;
+
+    db.ref('Registro_Clientes/'+cedula+0).once('value').then(
         function (result) {
             if(result){
                 let title = result?.val()?.password;
@@ -64,3 +101,4 @@ firebase.database().ref('articles/' + article_id).once('value').then(
         console.log(title);
     }
 )
+ */

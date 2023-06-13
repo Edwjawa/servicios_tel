@@ -5,7 +5,7 @@ a:link{
 }
 
 body{
-    background-image: url(../imag/paticas.png);
+    
     font-family: 'Bubblegum Sans', cursive;
 }
 
@@ -72,7 +72,7 @@ form h2{
 h1{
     font-size: 45px;
     margin-top: 10px;
-    margin-left: 175px;
+    /* margin-left: 175px; */
     color:#204c4c;
     /* justify-content: center; */
     /* align-content: center; */
@@ -151,13 +151,20 @@ ul {list-style-type: none;
     /* border-radius: 10%; */
 }
 
+.banner{
+    width: 80%;
+    display:flex;
+    justify-content: center;
+}
 
-.grid-container {
-    display: grid;
-    grid-template-columns: 60% 40%;
-    align-items: center;
-    
-    
+.flex-container {
+    /* grid-template-columns: 60% 40%; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    /* align-items: center; */
+    text-align: center;
 }
 
 .myart{

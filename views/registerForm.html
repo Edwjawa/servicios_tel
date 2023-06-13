@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Caninos y Felinos</title>
-    <link rel="icon" type="veterinaria" href="../imag/veterinario.ico">
+    <link rel="icon" type="" href="../views/imag/telefono.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../styles/registerForm.css">
+    <link rel="stylesheet" href="../views/resources/styles/registerForm.css">
 </head>
 
 <body class="principal">
@@ -17,11 +17,10 @@
     <div class="mydiv">
         
                 
-            <header class="grid-container">
+            <header class="flex-container">
                 
-                <div>
-                    <h2>CENTRO  </h2>
-                    <h1> DE REGISTRO <br><span style="margin-left: 90px;"> TELEFONIA </span></h1>
+                <div class="banner">
+                    <h1><a href="../index.html">CENTRO DE REGISTRO TELEFONIA</a></h1>
                 </div> 
                 <div>
                     <a href="/index.html">
@@ -56,10 +55,7 @@
 
                     </li>
 
-                    <button class="myreg">
-                        <a href="./pag/registerForm.html"> REGISTRATE </a>
-                    </button>
-
+                   
                     
                 </ul>
                 
@@ -71,7 +67,7 @@
     
             <section class="mysection">
                 
-                <form  method= "post" action="" class="myform" id="register"> 
+                <form  method= "get" action="" class="myform" id="register" onsubmit="ingresarRegistro(); return false;"> 
             
                     <h2>Registrate</h2>    
                     
@@ -93,40 +89,40 @@
                     
                     
                     <label class="mylabel2" for="fecha">Fecha de Nacimiento: 
-                        <input type="date" name="fecha">
+                        <input type="date" name="fecha" id="fecha">
                     </label>                
                                         
                     <label class="mylabel2" for="email">Correo:
                     
-                    <input class="mynormalinput" type="email"  id="name" name="email" required> 
+                    <input class="mynormalinput" type="email"  id="email" name="email" required> 
                     </label>
                     
                     <label class="mylabel2" for="emailc">Confirma Correo:
                     
-                    <input class="mynormalinput" type="email"  id="name" name="emailc" required> 
+                    <input class="mynormalinput" type="email" name="emailc" id="emailc" required> 
                     </label>
                     
 
                     <label class="mylabel2" for="user">Usuario:
-                        <input maxlength="10" type="text" name="user" required>
+                        <input maxlength="10" type="text" name="user" id="user" required>
                     </label>
 
                     <label class="mylabel2" for="password">Crea una Contraseña
-                        <input type="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                        <input type="password" name="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
                         title="Usar al menos 1 número, 1 mayúscula, 1 minúscula y tener más 7 de carácteres." required>
                     </label>
                     
                     <label class="mylabel2" for="passwordc">Confirma Contraseña
-                        <input type="password" name="passwordc" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                        <input type="password" name="passwordc" id="passwordc" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                         title="Usar al menos 1 número, 1 mayúscula, 1 minúscula y tener más 7 de carácteres." required>
                     </label>
 
                     <div class="mydivbutton">        
                                                 
-                        <button class="myval" type="reset"  onclick="ingresarLogin()"> LIMPIAR
+                        <button class="myval" type="reset"> LIMPIAR
                         </button>
 
-                        <button style="background-color: #ff9d00;" class="myval" type="submit" formaction="./construction.html"> REGISTRAR
+                        <button style="background-color: #ff9d00;" class="myval" id="myval" type="submit"> REGISTRAR
                         </button>
                     </div>                    
                 </form>
@@ -137,8 +133,9 @@
 
             <p>Contáctanos <br> 
             Linea gratuita 018000-00001 <br>
-            creditos:<a href="https://www.flaticon.es/iconos-gratis/veterinario" title="veterinario iconos">Veterinario iconos creados por Freepik - Flaticon</a>
-           
+                
+            creditos:<a href="https://www.flaticon.es/iconos-gratis/llamada" title="llamada iconos">Llamada iconos creados por Gregor Cresnar - Flaticon</a>
+            
             </p>
             <h3>
             Página elaborada por: <br>
@@ -148,10 +145,11 @@
             
        
         </footer>
-        <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
-        <script src="../js/conector copy.js"></script>
+        <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+        <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+        <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+        <script defer src="../models/conexion_db.js"></script>
+        <script src="../controllers/registro_cliente.js"></script>
 
 </body>
 </html>

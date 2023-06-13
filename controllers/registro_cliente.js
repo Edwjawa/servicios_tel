@@ -1,56 +1,58 @@
+var cita_id =1;
+
+function ingresarRegistro(){
+
+  try{
+
+    nombre_cliente =  document.getElementById('name').value;
+    console.log("nombre_cliente es tipo " +typeof nombre_cliente);
+    
+    apellido_cliente =  document.getElementById('apellido').value;
+    console.log("nombre_cliente es tipo " +typeof apellido_cliente);
+    
+    cedula_cliente =  document.getElementById('cedula').value;
+    console.log("nombre_cliente es tipo " +typeof cedula_cliente);
+    
+    correo_cliente =  document.getElementById('email').value;
+    console.log("nombre_cliente es tipo " +typeof descripcion_solicitud_cliente);
+    
+    // correo_cliente =  document.getElementById('emailc').value;
+    // console.log("nombre_cliente es tipo " +typeof descripcion_solicitud_cliente);
+    
+    usuario_cliente =  document.getElementById('user').value;
+    console.log("nombre_cliente es tipo " +typeof television_afectados_cliente);
+  
+    password_cliente =  document.getElementById('password').value;
+    console.log("nombre_cliente es tipo " +typeof intenet_afectados_cliente);
+  
+    // password_cliente =  document.getElementById('passwordc').value;
+    // console.log("nombre_cliente es tipo " +typeof intenet_afectados_cliente);
+  
+    f_nacimiento =  document.getElementById('fecha').value;
+    console.log("nombre_cliente es tipo " +typeof fecha_solicitud_cliente);
+    
+    var registro = firebase.database();
+    
+    registro.ref('Registro_Clientes/' + cedula_cliente).set({
 
 
+        '001_nombre':nombre_cliente,
+        '002_apellido':apellido_cliente,
+        '003_cedula':cedula_cliente,
+        '004_correo':correo_cliente,
+        '005_usuario':usuario_cliente,
+        '006_password':password_cliente,
+        '007_Nacimiento':f_nacimiento,
+        });
 
+    var msg = "Registro exitoso";
+      alert (msg);
+  }
 
-//crear metodos para obtener datos del DOM 
-// adaptar para el caso
+   catch(error){
+      console.log (error);
+   }  
+    
 
-function ingresarLogin(){
-
-    let documento = document.getElementById('usuario').value;
-    let password  = document.getElementById('password').value;
-
-    firebase.database().ref('Usuarios/'+documento+0).once('value').then(
-        function (result) {
-            if(result){
-                let title = result?.val()?.password;
-                if(password == title){
-                    document.getElementById('Ingreso').textContent='BIENVENIDO.';
-                }else{
-                    alert('Datos erroneos');
-                }
-            }else{
-                alert('Datos erroneos desde la coleccion');
-            }
-            
-        }
-    )
 }
 
-
-
-// se crea el id para la base de datos, crear un método para auto incrementar el valor del id
-
-
-let cliente_id = 1;
-// se crea el elemento a agregar en la base de datos
-
-let cliente_registro = {
-    'nombre_registro': 'Manazanito',
-    'apellido_registro':'Velez',
-    'cedula_registro':'Velez',
-    'fecha_Nacimiento_registro':'Velez',
-    'correo_registro':'Velez',
-    'Usuario_registro':'Velez',
-    'Contraseña_registro':'Velez',
-   
-}
-
-// firebase.database().ref('articles/' + article_id).set(article);
-
-firebase.database().ref('articles/' + article_id).once('value').then(
-    function (snapshot) {
-        var title = snapshot.val().title;
-        console.log(title);
-    }
-)
